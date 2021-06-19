@@ -67,7 +67,7 @@ let scrabbleScore = function(word) {
       let newLetter = word[i];
       newScrabbleScore += newPointStructure[newLetter];
     }
-  return `Score for "${word}" is: ${newScrabbleScore}`;
+  return newScrabbleScore;
 };
 
 const scoringAlgorithms = [
@@ -119,7 +119,7 @@ function runProgram() {
   let word = initialPrompt();
   let scorerFunction = scorerPrompt();
   let score = scorerFunction(word);
-  console.log(`Your score for "${word}" is: ${score}`);   
+  console.log(score);   
 }
 
 // Don't write any code below this line //
